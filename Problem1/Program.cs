@@ -28,7 +28,7 @@ namespace Problem1
                 {
                     Console.WriteLine($"Componentes: {receita.Descrição}, Quantidade: {receita.Quantidade}, Unidade: {receita.Unidade}");
                 }
-		Console.WriteLine();
+                Console.WriteLine();
             }
         }
     }
@@ -47,7 +47,7 @@ namespace Problem1
         public string Unidade { get; set; }
     }
 
-    public class Receita
+    public interface Receita
     {
         public List<Ingrediente> Componentes { get; set; }
     }
@@ -60,6 +60,7 @@ namespace Problem1
         }
 
         public string Descrição { get; set; }
+        public List<Ingrediente> Componentes { get; set; }
     }
 
     public class Cardapio
