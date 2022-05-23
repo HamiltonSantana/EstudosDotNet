@@ -30,6 +30,29 @@
 >* 40 ml de de pinga
 
 
+### Boxing & Unboxing
+
+**Problem:** Estamos tendo alguns problemas de performance na aplicação. O arquiteto esta suspeito de trechos de código onde atributos do tipo `object` estão sendo usados com muita frequência para dar 'flexibilidade' a alguns cálculos.
+
+```c#
+// Exemplo
+public static object Incrementador(object valor)
+{
+    if (valor is int){
+        var result = ((int)valor);
+        return result += 1;
+    }
+    else {
+        var result = ((double)valor);
+        return result += 1;
+    }
+}
+
+```
+
+Pergunta: Por que o arquiteto suspeita que esse trecho de código pode causar degradação na performance?
+
+
 ### Patterns & Conventions
 
 ### DRY
